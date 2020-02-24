@@ -4,7 +4,10 @@ let arr2 = [32, 26, 37, 28, 27, 34, 31, 30, 41, 37, 25, 37, 33, 24, 27, 35, 34, 
 
 arr1.reverse()
 
-let letterArray = arr2.map(n => arr1[n-24])
+let newArr = [...arr2]
+newArr.sort()
+
+let letterArray = arr2.map(n => arr1[n-newArr[0]])
 
 let result = letterArray.map(letter => letter ? letter : ' ').join('')
 
